@@ -65,22 +65,9 @@ main {
     margin-left: 10%;
 }
 
-th, td {
-    padding: 15px;
-    text-align: left;
-}
 
-td {
-    border-bottom: 1px solid #000;
-}
+/* Designs for the Menu */
 
-td:last-of-type::before {
-    content: "$ ";
-}
-
-tbody tr:hover {
-    background-color: #d1c842;
-}
 #menu {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -89,6 +76,27 @@ tbody tr:hover {
     font-style: italic;
     font-family: 'Courier New', Courier, monospace;
 }
+
+#menu th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+#menu td {
+    border-bottom: 1px solid #000;
+}
+
+#menu td:last-of-type::before {
+    content: "$ ";
+}
+
+#menu tbody tr:hover {
+    background-color: #d1c842;
+}
+
+
+/* Footer styles  */
+
 footer {
     clear: both;
     background-color: #000000;
@@ -99,3 +107,66 @@ footer {
     font-size: 12pt;
     width: 80%;
 }
+
+/* Form designs */
+input[type=text], input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+input[type=number] {
+    background-color: #c9bd199c;
+}
+input[type=submit], input[type=reset] {
+    width: 100%;
+    background-color: #09130a;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=reset]:hover {
+    background-color: #df1b1b;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[type=textarea] {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+}
+#contact {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding: 20px;
+}
+
+.weekDays-selector input {
+    display: none;
+  }
+  
+  .weekDays-selector input[type=checkbox] + label {
+    display: inline-block;
+    border-radius: 6px;
+    background: #dddddd;
+    height: 40px;
+    width: 30px;
+    margin-right: 3px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .weekDays-selector input[type=checkbox]:checked + label {
+    background: #2AD705;
+    color: #ffffff;
+  }

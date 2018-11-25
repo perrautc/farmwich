@@ -18,3 +18,12 @@ Farmwich has the following pages:
 
 ## Contact Us
 [Contact Us](https://perrautc.github.io/farmwich/contactus.html)
+
+## Stylesheet
+[Stylesheet](https://perrautc.github.io/farmwich/styles.css)
+
+## Template
+[Contact Us](https://perrautc.github.io/farmwich/template.html)
+
+## GitHub
+[GitHub](https://github.com/perrautc/farmwich)

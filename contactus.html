@@ -10,7 +10,7 @@
 <body>
     <header>
         <a href="https://perrautc.github.io/farmwich/"><img src="images/Farmwich Logo.jpg" alt="Farmwich Logo" width="" height=""></a>
-        <h1>Welcome to Farmwich</h1>
+        <h1>Contact Farmwich</h1>
     </header>
 
     <nav>
@@ -24,25 +24,89 @@
     </nav>
     
     <main>
-        <h2>
-            Contact Us to request a catering qoute, or to provide feedback.
-        </h2>
-        <form action="" method="post" autocomplete="on">
-            First Name <br>
-            <input type="text" name="firstname" placeholder="First Name"/>
-            Last Name <br>
-            <input type="text" name="lastname" placeholder="Last Name"/>
-            Email Address <br>
-            <input type="text" name="email" autocomplete="off" placeholder="Email Address"/>
-            Phone Number <br>
-            <input type="text" name="phone" placeholder="Phone Number"/>
-            Comments <br>
-            <textarea name="comments"placeholder="Comments" cols="4" rows="5">
-            </textarea>
-            <input type="submit" value="Submit"/>
-        </form>
+        <div id="contact">
+            <h2>
+                Contact us to request a catering qoute, or to provide feedback.
+            </h2>
+            <form action="" method="post" autocomplete="on">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" placeholder="First Name" required/>
+                
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" placeholder="Last Name" required/>
+                
+                <label for="email">Email</label>
+                <input type="text" name="email" autocomplete="off" placeholder="Email Address" required/>
+                
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" placeholder="Phone Number"/>
+                
+                <label for="comments">Comments</label> <br>
+                <textarea name="comments" cols="50" rows="5"></textarea>
+
+
+                <div class="weekDays-selector">
+                        <p>Best day(s) to contact you? </p>
+                    <input type="checkbox" id="mon" class="weekday" />
+                    <label for="mon">M</label>
+                    <input type="checkbox" id="tue" class="weekday" />
+                    <label for="tue">T</label>
+                    <input type="checkbox" id="wed" class="weekday" />
+                    <label for="wed">W</label>
+                    <input type="checkbox" id="thu" class="weekday" />
+                    <label for="thu">T</label>
+                    <input type="checkbox" id="fri" class="weekday" />
+                    <label for="fri">F</label>
+                    <input type="checkbox" id="sat" class="weekday" />
+                    <label for="sat">S</label>
+                    <input type="checkbox" id="sun" class="weekday" />
+                    <label for="sun">S</label>
+                </div>
+
+                <br>
+                <label for="time">Best time to Contact you?</label>
+                <select id="time" name="time">
+                  <option value="morning">Morning</option>
+                  <option value="noon">Noon</option>
+                  <option value="afternoon">Afternoon</option>
+                </select>
+
+                <br>
+                <p>Contact method?</p>
+                <fieldset>
+                        <input type="radio" name="contactMethod" id="radio-1" value="Phone"/>
+                        <label for="radio-1">Phone</label>
+                
+                        <input type="radio" name="contactMethod" id="radio-2" value="Email" checked="checked"/>
+                        <label for="radio-2">Email</label>
+                </fieldset>
+
+                <br>
+                <label for="passcode">Passcode</label>
+                <input type="number" id="passCodeNumber" name="passcode" min="1000" max="9999">
+                <button onclick="validatePassCode()">OK</button>
+
+                <p id="passcode"></p>
+
+                <input type="submit" value="Submit"/>
+                <input type="reset" value="Reset">
+            </form>
+        </div>
     </main>
     
     <footer></footer>
+
+    <script>
+        function validatePassCode() {
+            var inpObj = document.getElementById("passCodeNumber");
+            if(inpObj.checkValidity() == false){
+                document.getElementById("passcode").innerHTML = inpObj.validationMessage;
+                document.getElementById("passcode").setAttribute("style", "color: #D8000C; background-color: #FFD2D2");
+            } else {
+                document.getElementById("passcode").innerHTML = "Passcode Valid";
+                document.getElementById("passcode").setAttribute("style", "color: #4F8A10; background-color: #DFF2BF");
+            }
+        }
+    </script>
 </body>
 </html>

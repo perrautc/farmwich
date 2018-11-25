@@ -1,6 +1,6 @@
 # ![logo](https://github.com/perrautc/farmwich/blob/master/images/Farmwich.png)
 
-Farmwich is a restaurant concept of farm to table gourmey sandwiches. You can view the website here: [FarmWich](https://perrautc.github.io/farmwich/)
+Farmwich is a restaurant concept of farm to table gourmet sandwiches. You can view the website here:[FarmWich](https://perrautc.github.io/farmwich/)
 
 Farmwich has the following pages:
 

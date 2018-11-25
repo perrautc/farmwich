@@ -8,13 +8,13 @@ Farmwich has the following pages:
 [Home](https://perrautc.github.io/farmwich/index.html)
 
 ## History
-[Home](https://perrautc.github.io/farmwich/history.html)
+[History](https://perrautc.github.io/farmwich/history.html)
 
 ## Menu
-[Home](https://perrautc.github.io/farmwich/menu.html)
+[Menu](https://perrautc.github.io/farmwich/menu.html)
 
 ## About Us
-[Home](https://perrautc.github.io/farmwich/aboutus.html)
+[About Us](https://perrautc.github.io/farmwich/aboutus.html)
 
 ## Contact Us
-[Home](https://perrautc.github.io/farmwich/contactus.html)
+[Contact Us](https://perrautc.github.io/farmwich/contactus.html)

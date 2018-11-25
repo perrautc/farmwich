@@ -53,7 +53,7 @@ nav ul li a:link, nav ul li a:visited {
     text-decoration: none;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, .selected {
     color: #ffffff;
     background-color: #9b30ff;
 }

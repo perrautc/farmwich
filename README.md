@@ -19,6 +19,9 @@ Farmwich has the following pages:
 ## Contact Us
 [Contact Us](https://perrautc.github.io/farmwich/contactus.html)
 
+## Chef
+[Contact Us](https://perrautc.github.io/farmwich/chef.html)
+
 ## Stylesheet
 [Stylesheet](https://perrautc.github.io/farmwich/styles.css)
 

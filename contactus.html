@@ -1,17 +1,55 @@
-<!doctype html lang="en">
+<!doctype html>
 
-<html>
+<html lang="en">
 
 <head>
 <title>Farmwich Restaurant - Contact Us</title>
 <link rel="stylesheet" href="styles.css" type="text/css">
+<style type="text/css">
+form {
+    border-radius: 5px; 
+    background-color: #f2f2f2;
+    margin: 20px; padding: 20px;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+input[type=number] {
+    background-color: #c9bd199c;
+}
+input[type=submit], input[type=reset] {
+    width: 100%;
+    background-color: #09130a;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=number] {
+    background-color: #c9bd199c;
+}
+input[type=textarea] {
+	border: 3px solid #cccccc;
+	padding: 5px;
+}
+</style>
 </head>
 
 <body>
-    <header>
-            <a href="https://perrautc.github.io/farmwich/"><img src="images/Farmwich-Logo.jpg" alt="Farmwich-Logo"></a>
-        <h1>Contact Farmwich</h1>
-    </header>
+        <header>
+                <a href="index.html"><img src="images/logo.jpg" width="151" height="150" alt="Farmwich-Logo"></a>
+            <h1>Welcome to Farmwich</h1>
+        </header>
 
     <nav>
             <ul>
@@ -30,7 +68,7 @@
             <h2>
                 Contact us to request a catering qoute, or to provide feedback.
             </h2>
-            <form action="" method="post" autocomplete="on">
+            <form action="" method="post" autocomplete="on" style="">
                 <label for="firstname">First Name</label>
                 <input id="firstname" type="text" name="firstname" placeholder="First Name" required/>
                 
@@ -38,34 +76,44 @@
                 <input id="lastname" type="text" name="lastname" placeholder="Last Name" required/>
                 
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" autocomplete="off" placeholder="Email Address" required/>
+                <input type="email" id="email" name="email" autocomplete="off" placeholder="Email Address" required/>
                 
                 <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="phone" placeholder="Phone Number"/>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required/>
                 
                 <label for="comments">Comments</label> <br>
                 <textarea name="comments" id="comments" cols="50" rows="5"></textarea>
-
-
-                <div class="weekDays-selector">
-                        <p>Best day(s) to contact you? </p>
-                    <input type="checkbox" id="mon" class="weekday" />
-                    <label for="mon">M</label>
-                    <input type="checkbox" id="tue" class="weekday" />
-                    <label for="tue">T</label>
-                    <input type="checkbox" id="wed" class="weekday" />
-                    <label for="wed">W</label>
-                    <input type="checkbox" id="thu" class="weekday" />
-                    <label for="thu">T</label>
-                    <input type="checkbox" id="fri" class="weekday" />
-                    <label for="fri">F</label>
-                    <input type="checkbox" id="sat" class="weekday" />
-                    <label for="sat">S</label>
-                    <input type="checkbox" id="sun" class="weekday" />
-                    <label for="sun">S</label>
-                </div>
-
                 <br>
+
+                <fieldset>
+                    <legend>Best day(s) to contact you? </legend>
+                    <input type="checkbox" id="mon"  name="weekday" value="monday">
+                    <label for="mon">M</label>
+                    <input type="checkbox" id="tue"  name="weekday" value="tuesday">
+                    <label for="tue">T</label>
+                    <input type="checkbox" id="wed"  name="weekday" value="wednesday">
+                    <label for="wed">W</label>
+                    <input type="checkbox" id="thu"  name="weekday" value="thursday">
+                    <label for="thu">T</label>
+                    <input type="checkbox" id="fri"  name="weekday" value="friday">
+                    <label for="fri">F</label>
+                    <input type="checkbox" id="sat"  name="weekday" value="saturday">
+                    <label for="sat">S</label>
+                    <input type="checkbox" id="sun"  name="weekday" value="sunday">
+                    <label for="sun">S</label>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Ways you typically order?</legend>
+                    <input type="checkbox" name="order" value="walk-in">
+                    <label for="walk-in">Walk-in</label>
+                    <input type="checkbox" name="order" value="call-ahead">
+                    <label for="call-ahead">Call-ahead</label>
+                    <input type="checkbox" name="order" value="catering">
+                    <label for="catering">Catering</label>
+                </fieldset>
+                
                 <label for="time">Best time to Contact you?</label>
                 <select id="time" name="time">
                   <option value="morning">Morning</option>
@@ -73,9 +121,16 @@
                   <option value="afternoon">Afternoon</option>
                 </select>
 
+                <label for="time">Best way to get feedback from you?</label>
+                <select id="feedback" name="feedback">
+                  <option value="person">In Person</option>
+                  <option value="phone">Phone Call</option>
+                  <option value="email">Email</option>
+                </select>
                 <br>
-                <p>Contact method?</p>
+                
                 <fieldset>
+                        <legend>Contact method?</legend>
                         <input type="radio" name="contactMethod" id="radio-1" value="Phone"/>
                         <label for="radio-1">Phone</label>
                 
@@ -83,15 +138,24 @@
                         <label for="radio-2">Email</label>
                 </fieldset>
 
+                <fieldset>
+                        <legend>Favoriate Meat Delivery Device?</legend>
+                        <input type="radio" name="favoriate" id="radio-3" value="Bagel"/>
+                        <label for="radio-3">Bagel</label>
+                
+                        <input type="radio" name="favoriate" id="radio-4" value="Bread" checked="checked"/>
+                        <label for="radio-4">Bread</label>
+                </fieldset>
+
                 <br>
                 <label for="passCodeNumber">Passcode</label>
-                <input type="number" id="passCodeNumber" name="passcode" min="1000" max="9999">
-                <button onclick="validatePassCode()">OK</button>
+                <input type="number" id="passcodenumber" name="passcode" min="1000" max="9999">
+                <button onclick="validatePassCode()" type="button">OK</button>
 
                 <p id="passcode"></p>
 
-                <input type="submit" value="Submit"/>
-                <input type="reset" value="Reset">
+                <input type="submit" value="Submit" style="background-color: #45a049;" />
+                <input type="reset" value="Reset" style="background-color: #df1b1b;" />
             </form>
         </div>
     </main>
@@ -108,13 +172,13 @@
 
     <script>
         function validatePassCode() {
-            var inpObj = document.getElementById("passCodeNumber");
+            var inpObj = document.getElementById("passcodenumber");
             if(inpObj.checkValidity() == false){
                 document.getElementById("passcode").innerHTML = inpObj.validationMessage;
-                document.getElementById("passcode").setAttribute("style", "color: #D8000C; background-color: #FFD2D2");
+                document.getElementById("passcode").setAttribute("style", "color: #d8000c; background-color: #ffd2d2");
             } else {
                 document.getElementById("passcode").innerHTML = "Passcode Valid";
-                document.getElementById("passcode").setAttribute("style", "color: #4F8A10; background-color: #DFF2BF");
+                document.getElementById("passcode").setAttribute("style", "color: #4f8a10; background-color: #dff2bf");
             }
         }
     </script>

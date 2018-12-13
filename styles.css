@@ -1,10 +1,12 @@
 @charset "utf-8";
 
 body {
-    background-color: #9b30ff;
+    background-color: #7f9c78c4;
     font-family: Arial, Tahoma, sans-serif;
     font-size: 16pt;
     color: #000000;
+    display: grid;
+    grid-template-rows: 300px 50px 1fr 50px;
 }
 
 h1 {
@@ -14,10 +16,6 @@ h1 {
 header {
     background-color: #000000;
     color: #ffffff;
-    text-align: center;
-    padding: 5px;
-    width: 80%;
-    margin-left: 10%;
 }
 
 #container {
@@ -25,51 +23,46 @@ header {
 }
 
 nav {
-    background-color: #ffffff;
-    display: inline-block;
-    color: #000000;
-    padding: 5px;
-    width: 80%;
-    margin-left: 10%;
-    font-weight: bold;
+    clear: both;    
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
 nav ul li {
     float: left;
-    padding: 5px;
+    border-right: 1px solid #bbb;
 }
-
-nav ul li a:link, nav ul li a:visited {
+nav li:last-child {
+    border-right: none;
+    float: right;
+    background: #008000;
+  }
+nav ul li a {
     display: block;
-    width: 150px;
-    margin-right: 4px;
-    color: #000000;
-    padding: 2px 4px 2px 4px;
-    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-}
+    }
 
 nav ul li a:hover, .selected {
-    color: #ffffff;
-    background-color: #9b30ff;
+    background-color: #111;
 }
-main {
-    width: 80%;
-    background-color: #ffffff;
-    float: left;
-    padding: 5px;
-    margin-left: 10%;
-}
+
 
 
 /* Designs for the Menu */
 
 #menu {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+    background-color: #76df76;
 }
 
 .menu-description {
@@ -94,7 +87,9 @@ main {
     background-color: #d1c842;
 }
 
-
+.checked {
+    color: orange;
+}
 /* Footer styles  */
 
 footer {
@@ -102,129 +97,4 @@ footer {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    margin-left: 10%;
-    padding: 5px;
-    font-size: 12pt;
-    width: 80%;
 }
-
-/* Form designs */
-input[type=text], input[type=number], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; 
-}
-input[type=number] {
-    background-color: #c9bd199c;
-}
-input[type=submit], input[type=reset] {
-    width: 100%;
-    background-color: #09130a;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-input[type=reset]:hover {
-    background-color: #df1b1b;
-}
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-input[type=textarea] {
-	width: 600px;
-	height: 120px;
-	border: 3px solid #cccccc;
-	padding: 5px;
-}
-#contact {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    margin: 20px;
-    padding: 20px;
-}
-
-.weekDays-selector input {
-    display: none;
-  }
-  
-  .weekDays-selector input[type=checkbox] + label {
-    display: inline-block;
-    border-radius: 6px;
-    background: #dddddd;
-    height: 40px;
-    width: 30px;
-    margin-right: 3px;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .weekDays-selector input[type=checkbox]:checked + label {
-    background: #2AD705;
-    color: #ffffff;
-  }
-
-  /* Farm */
-#farm img {
-    width: 100%;
-    display: block;
-}
-.farmPics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-}
-.farmPics > div {
-    background-color: #eee;
-    padding: 1em;
-}
-
-.farmPics > div:nth-child(odd){
-    background-color: #ddd;
-}
-@media screen and (max-width: 600px){
-    .farmPics {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-column-gap: .5em;
-        grid-row-gap: .5em;
-    }
-}
-.overview{
-    position: relative;
-}
-.overview:hover .overlay {
-    opacity: .8;
-  }
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgb(13, 114, 30);
-  }
-
-  .overlay > .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
